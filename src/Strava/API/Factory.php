@@ -1,6 +1,7 @@
 <?php
 namespace Strava\API;
 
+use League\OAuth2\Client\Provider\Strava;
 use Pest;
 
 /**
@@ -28,9 +29,9 @@ class Factory {
         $options = [
             'clientId'     => $client_id,
             'clientSecret' => $client_secret,
-            'redirectUri'  => $redirect_uri
+            'redirectUri'  => $redirect_uri,
         ];
-        $OAuthClient = new OAuth($options);
+        $OAuthClient = new Strava($options);
 
         return $OAuthClient;
     }

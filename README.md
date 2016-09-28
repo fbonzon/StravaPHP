@@ -38,16 +38,16 @@ Use composer to install this StravaPHP package.
 <?php
 include 'vendor/autoload.php';
 
-use Strava\API\OAuth;
+use League\OAuth2\Client\Provider\Strava;
 use Strava\API\Exception;
 
 try {
     $options = [
         'clientId'     => 1234,
         'clientSecret' => 'APP-TOKEN',
-        'redirectUri'  => 'http://my-app/callback.php'
+        'redirectUri'  => 'http://my-app/callback.php',
     ];
-    $oauth = new OAuth($options);
+    $oauth = new Strava($options);
 
     if (!isset($_GET['code'])) {
         print '<a href="'.$oauth->getAuthorizationUrl([
@@ -111,16 +111,16 @@ $factory->getOAuthClient($client_id, $client_secret, $redirect_uri);
 $factory->getAPIClient($token);
 ```
 
-### Strava\API\OAuth
+### League\OAuth2\Client\Provider\Strava
 #### Usage
 ```php
 // Parameter information: https://strava.github.io/api/v3/oauth/#get-authorize
 $options = [
     'clientId'     => 1234,
     'clientSecret' => 'APP-TOKEN',
-    'redirectUri'  => 'http://my-app/callback.php'
+    'redirectUri'  => 'http://my-app/callback.php',
 ];
-$oauth = new OAuth($options);
+$oauth = new Strava($options);
 
 // The OAuth authorization procces (1st; let the user approve, 2nd; token exchange with Strava)
 if (!isset($_GET['code'])) {
@@ -142,7 +142,7 @@ if (!isset($_GET['code'])) {
 #### Methods
 ```php
 $oauth->getAuthorizationUrl($options = []);
-$oauth->getAccessToken($grant = 'authorization_code', $params = []);
+$oauth->getAccessToken($grant = 'authorization_code', $options = []);
 ```
 ### Strava\API\Client
 #### Usage

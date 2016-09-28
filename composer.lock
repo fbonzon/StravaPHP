@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "77c172cc11df7e3c764647cda1fd3f20",
-    "content-hash": "2c012fc2e5525d916ce36129119dfada",
+    "hash": "8db2ef5c22fc83999c163499b807504f",
+    "content-hash": "43c6c0f17a953ac0f5be97bf46ed2811",
     "packages": [
         {
             "name": "educoder/pest",
@@ -48,6 +48,63 @@
             "description": "A proper REST client for PHP.",
             "homepage": "https://github.com/educoder/pest",
             "time": "2013-11-17 12:58:01"
+        },
+        {
+            "name": "edwin-luijten/oauth2-strava",
+            "version": "dev-bikewithme",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fbonzon/oauth2-strava.git",
+                "reference": "73a6771503d4aa031c84cce13662967392a47ed5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fbonzon/oauth2-strava/zipball/73a6771503d4aa031c84cce13662967392a47ed5",
+                "reference": "73a6771503d4aa031c84cce13662967392a47ed5",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "~1.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "League\\OAuth2\\Client\\Test\\": "tests/src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Edwin Luijten",
+                    "email": "edwin.luijten@live.nl"
+                }
+            ],
+            "description": "Strava OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authentication",
+                "authorization",
+                "client",
+                "oauth",
+                "oauth2",
+                "strava"
+            ],
+            "support": {
+                "source": "https://github.com/fbonzon/oauth2-strava/tree/bikewithme"
+            },
+            "time": "2016-09-27 19:51:05"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1543,7 +1600,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "edwin-luijten/oauth2-strava": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
