@@ -2,15 +2,9 @@
     "name": "basvandorst/stravaphp",
     "description": "Strava V3 API PHP client with OAuth authentication",
     "keywords": ["Strava", "API", "OAuth", "PHP", "StravaPHP"],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/fbonzon/oauth2-strava"
-        }
-    ],
     "require": {
         "php": ">=5.5.0",
-        "edwin-luijten/oauth2-strava": "dev-bikewithme",
+        "edwin-luijten/oauth2-strava": "^1.0",
         "educoder/pest": "^1.0"
     },
     "require-dev": {
